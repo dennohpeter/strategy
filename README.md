@@ -15,7 +15,7 @@ A framework for writing MEV strategies and bots in Rust
 
 ```toml
 [dependencies]
-strategy = { version = "0.1.0" }
+strategy = { version = "0.1.1" }
 ```
 
 ### Usage
