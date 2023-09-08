@@ -1,6 +1,7 @@
 ### Strategy
 
 [![Rust](https://github.com/dennohpeter/strategy/actions/workflows/general.yml/badge.svg)](https://github.com/dennohpeter/strategy/actions/workflows/general.yml)
+[![Rust](https://github.com/dennohpeter/strategy/actions/workflows/audit.yml/badge.svg)](https://github.com/dennohpeter/strategy/actions/workflows/audit.yml)
 [![](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![](https://img.shields.io/crates/v/strategy)](https://crates.io/crates/strategy)
 
@@ -19,8 +20,9 @@ strategy = { version = "0.1.0" }
 
 ### Usage
 
+`strategy.rs`
+
 ```rust
-//! strategy.rs
 
 use strategy::types::Strategy, Event, Action};
 
@@ -40,7 +42,8 @@ impl<M> Sandwicher<M> {
 #[async_trait]
 impl<M: Middleware + 'static> Strategy<Event, Action> for Sandwicher<M> {
     async fn process_event(&mut self, event: Event) -> Option<Action> {
-        // Process incoming events/txs
+
+        // Process incoming event/tx
 
         None
     }
